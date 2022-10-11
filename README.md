@@ -41,7 +41,11 @@
 <br>
 
 [프로젝트 링크](http://www.woodongs.site) 
-// 계속 진행중입니다 (미완성)
+
+
+<br>
+
+[프로젝트 발표 자료](https://www.notion.so/codestates/39-Team044-1d1cf9268af045f78a0cb85eedbf7863#2208887488694281acd60c885a91b08a) 
 
 <br>
 
@@ -64,8 +68,8 @@
 |<img src="https://img.shields.io/badge/JAVA-007396?style=for-the-badge&logo=java&logoColor=white">|<img src="https://img.shields.io/badge/Spring-6DB33F?style=for-the-badge&logo=Spring&logoColor=white">|<img src="https://img.shields.io/badge/SpringBoot-6DB33F?style=for-the-badge&logo=SpringBoot&logoColor=white">|<img src="https://img.shields.io/badge/SrpingSecurity-6DB33F?style=for-the-badge&logo=SpringSecurity&logoColor=white">|<img src="https://img.shields.io/badge/mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white">|
 |-----|-----|-----|-----|-----|
 
-#### CD/CI
-|![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)|![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) | ![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white) | ![Apache Tomcat](https://img.shields.io/badge/apache%20tomcat-%23F8DC75.svg?style=for-the-badge&logo=apache-tomcat&logoColor=black) |
+#### AWS/DEPLOYMENT
+|![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)|![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?style=for-the-badge&logo=nginx&logoColor=white) | ![Apache Tomcat](https://img.shields.io/badge/apache%20tomcat-%23F8DC75.svg?style=for-the-badge&logo=apache-tomcat&logoColor=black) |
 |-----|-----|-----|-----|
 
 <br>
