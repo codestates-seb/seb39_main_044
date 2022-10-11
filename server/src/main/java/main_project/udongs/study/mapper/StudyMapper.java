@@ -49,6 +49,7 @@ public interface StudyMapper {
                 .nickName(member.getNickName())
                 .email(member.getEmail())
                 .phoneNumber(member.getPhoneNumber())
+                .profile(member.getProfile())
                 .city(member.getCity())
                 .emailVerifiedYn(member.getEmailVerifiedYn())
                 .profileImageUrl(member.getProfileImageUrl())
