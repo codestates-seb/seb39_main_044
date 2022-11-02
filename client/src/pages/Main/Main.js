@@ -141,11 +141,9 @@ const Main = () => {
       if (getlat) {
         fetch(`https://api.woodongs.site/study/around?size=10`, reqOption)
           .then((res) => {
-            console.log("res", res);
             return res.json();
           })
           .then((data) => {
-            console.log(data);
             return data;
           })
           .then((data) => setCardList(data.data))
@@ -169,7 +167,6 @@ const Main = () => {
         fetch(`https://api.woodongs.site/study?size=10`, reqOption)
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
             return data;
           })
           .then((data) => setCardList(data.data));
@@ -206,10 +203,8 @@ const Main = () => {
       })
       .then((data) => {
         setCardList([...cardList, ...data.data]);
-        console.log(data.sliceInfo);
         if (data.sliceInfo.nextAvailable) {
           setCursor(data.sliceInfo.lastIdx);
-          console.log(data.sliceInfo.lastIdx, cursor, cardList);
         } else {
           setIsAvailable(false);
         }
@@ -239,7 +234,6 @@ const Main = () => {
   const chosenImage = images[Math.floor(Math.random() * 4)];
   const bgImage = document.createElement("img");
   bgImage.src = `${chosenImage}`;
-  console.log(bgImage);
 
   return (
     <>

@@ -82,14 +82,14 @@ const AddStudy = () => {
           return res.json();
         }
       })
-      .then((res) => console.log(res))
+      // .then((res) => console.log(res))
       .catch((err) => console.log(err));
   };
   const getValue = (e) => {
     // e.preventDefault();
     const { value } = e.target;
-    console.log(e.target.name);
-    console.log("value", value);
+    // console.log(e.target.name);
+    // console.log("value", value);
     setContent({
       ...content,
       title: value,
@@ -97,8 +97,8 @@ const AddStudy = () => {
   };
   const getHeadValue = (e) => {
     const { value } = e.target;
-    console.log(e.target.headCount);
-    console.log("headcount", value);
+    // console.log(e.target.headCount);
+    // console.log("headcount", value);
     setContent({
       ...content,
       headCount: value,
@@ -121,8 +121,8 @@ const AddStudy = () => {
     // setIsChecked(!isChecked);
     // checkedItemHandler(target.parentNode, target.value, target.checked);
     const { value } = e.target;
-    console.log(e.target.category);
-    console.log("category", value);
+    // console.log(e.target.category);
+    // console.log("category", value);
     setContent({
       ...content,
       category: value,
@@ -177,7 +177,7 @@ const AddStudy = () => {
               </label>
             ))}
             {/* {console.log(target.parentNode, target.value, target.checked)}; */}
-            {console.log(checkedItems)}
+            {/* {console.log(checkedItems)} */}
           </div>
 
           <h2>*모집인원</h2>
@@ -203,7 +203,7 @@ const AddStudy = () => {
                 ...content,
                 body: bodyValue,
               });
-              console.log(bodyValue);
+              // console.log(bodyValue);
             }}
           >
             ● 스터디 목표 및 진행방식 [목표] : ( 예: 제이쿼리를 마스터하고자

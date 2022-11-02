@@ -37,7 +37,7 @@ const EditRecruit = () => {
       fetch(`https://api.woodongs.site/study/${id}`, reqOption)
         .then((res) => res.json())
         .then((data) => {
-          console.log("content", data);
+          // console.log("content", data);
           return data;
         });
     };
@@ -68,7 +68,7 @@ const EditRecruit = () => {
       window.location.href = `/card/edite`;
     } catch (err) {
       //서버에서 받은 에러 메시지 출력
-      console.log("오류발생!");
+      // console.log("오류발생!");
     }
   }, [canSubmit]);
 

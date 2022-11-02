@@ -91,14 +91,13 @@ const AddBoard = () => {
           return res.json();
         }
       })
-      .then((res) => console.log(res))
+     
       .catch((err) => console.log(err));
   };
 
   const getValue = (e) => {
     const { value } = e.target;
-    console.log(e.target.name);
-    console.log("value", value);
+
     setContent({
       ...content,
       title: value,
@@ -138,7 +137,7 @@ const AddBoard = () => {
                   ...content,
                   body: bodyValue,
                 });
-                console.log(bodyValue);
+        
               }}
             />
           </section>

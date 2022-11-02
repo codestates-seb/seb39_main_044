@@ -166,9 +166,12 @@ const MyGroup = () => {
 
   let socketJs = new SockJS("https://api.woodongs.site/ws-stomp");
   const stomp = StompJs.over(socketJs);
-  const messagesEndRef = useRef(null);
   var subscribeId = null;
 
+  const messagesEndRef = useRef(null);
+  
+
+  // 화면의 첫 랜더링시 채팅목록을 가져옴
   useEffect(() => {
     const getPreviousChat = () => {
       fetch(`https://api.woodongs.site/chatroom/${getStudyId}`, {
@@ -188,14 +191,14 @@ const MyGroup = () => {
 
 
   // 모든 구독 취소하기
-  const subscribeCancle = function () {
+  const subscribeCancle = function ( subscribeId ) {
     const length = subIdArr.length;
     for (let i = 0; i < length; i++) {
       const sid = subIdArr.pop();
-      stomp.unsubscribe(sid.id);
+      subscribeId .unsubscribe(sid.id);
       console.log("============unsubscribeed==========");
     }
-    stomp.disconnect(() => {});
+    // subscribeId .disconnect(() => {});
   };
 
   // 채팅방 클릭시 핸들링
@@ -213,29 +216,28 @@ const MyGroup = () => {
       // })
       .then(() => {
         setValidation(false);
+
         // 같은 버튼을 클릭하지 않았을 때만 구독해줌.
         if (getStudyId !== studyId) {
           setGetstudyId(studyId);
           setGetchat([]);
-          let socketJs = new SockJS("https://api.woodongs.site/ws-stomp");
-          const stomp = StompJs.over(socketJs);
+           socketJs = new SockJS("https://api.woodongs.site/ws-stomp");
+           stomp = StompJs.over(socketJs);
 
-          // stomp.subscriptions = {};
           stomp.connect({ token: token }, (frame) => {
-            console.log("connecteed" + frame);
-            console.log("subArr", subIdArr);
-            console.log(stomp);
+            console.log("connecteed : " + frame);
+            console.log("subArr : ", subIdArr);
+            console.log("stomp : ", stomp);
 
             if (stomp.ws.readyState === 1) {
               setTimeout(() => {
                 setValidation(true);
               }, 1000);
 
-              if (subscribeId !== null) {
-                subscribeId.disconnect();
-                subscribeCancle();
-                console.log("구독취소");
-              }
+              // if (!subscribeId === null) {
+              //   subscribeCancle(subscribeId);
+              //   console.log("구독취소");
+              // }
 
               subscribeId = stomp.subscribe(
                 `/topic/chat/` + studyId,

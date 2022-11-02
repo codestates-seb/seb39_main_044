@@ -67,7 +67,7 @@ const Redirect = () => {
           })
             .then((res) => res.json())
             .then((res) => {
-              console.log("사용자", res);
+              // console.log("사용자", res);
               setUserInfo({ ...res });
             })
             .then((res) => {
@@ -80,7 +80,7 @@ const Redirect = () => {
               }
             })
             .catch((error) => {
-              console.log(error);
+              // console.log(error);
               alert("로그인 실패");
             });
         }

@@ -110,7 +110,7 @@ const MyPage = () => {
       })
         .then((res) => res.json())
         .then((res) => {
-          // console.log("me", res);
+
           setChangeInfo((changeInfo) => {
             return {
               ...changeInfo,
@@ -124,7 +124,6 @@ const MyPage = () => {
           })
             .then((res) => res.json())
             .then((res) => {
-              // console.log("profile", res);
               setChangeInfo({ ...changeInfo, ...res });
               setUserInfo((userInfo) => {
                 return { ...userInfo };

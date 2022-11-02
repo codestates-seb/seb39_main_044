@@ -141,11 +141,9 @@ const EntireMain = () => {
         setIsLoading(true)
         setTimeout(() => {
           setCardList([...cardList, ...data.data]);
-          console.log(data.sliceInfo);
 
           if (data.sliceInfo.nextAvailable) {
             setCursor(data.sliceInfo.lastIdx);
-            console.log(data.sliceInfo.lastIdx, cursor, cardList);
           } else {
             setIsAvailable(false);
           }

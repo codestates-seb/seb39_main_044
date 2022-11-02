@@ -150,7 +150,6 @@ const Navbar = ({ myAround, cardList, setCardList, setRerender, reRender }) => {
       //연결되기 전에 닫히는 문제 해결
 
       if (stomp.ws.readyState === 1) {
-        console.log(stomp.ws.readyState);
         stomp.disconnect(() => {});
       }
     };
@@ -169,7 +168,7 @@ const Navbar = ({ myAround, cardList, setCardList, setRerender, reRender }) => {
       })
         .then((res) => res.json())
         .then((res) => {
-          console.log("로컬로그인정보 ", res);
+          //로컬 로그인 정보
           setUserInfo({ ...res });
           return res;
         });

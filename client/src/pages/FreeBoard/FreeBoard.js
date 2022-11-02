@@ -152,7 +152,6 @@ const FreeBoard = () => {
   };
   //검색버튼
   const handleInputSubmit = (e) => {
-    console.log(searchOp);
     if (searchOp === "제목") {
       let filtered = boardList.filter((el) => {
         return el.title.includes(searchInput);
@@ -205,10 +204,8 @@ const FreeBoard = () => {
       })
       .then((data) => {
         setBoardList([...boardList, ...data.data]);
-        console.log(data.sliceInfo);
         if (data.sliceInfo.nextAvailable) {
           setCursor(data.sliceInfo.lastIdx);
-          console.log(data.sliceInfo.lastIdx, cursor, boardList);
         } else {
           setIsAvailable(false);
         }

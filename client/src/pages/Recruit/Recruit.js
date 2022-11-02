@@ -164,7 +164,7 @@ const Recruit = () => {
       fetch("https://api.woodongs.site/study/" + `${id}`, reqOption)
         .then((res) => res.json())
         .then((data) => {
-          console.log("content", data);
+          // console.log("content", data);
           return data;
         })
         .then((data) => setContent({ ...content, ...data }));
@@ -202,7 +202,7 @@ const Recruit = () => {
       fetch(`https://api.woodongs.site/study/${id}`, reqOption)
         .then((res) => res.json())
         .then((data) => {
-          console.log(data); //댓글배열로나옴
+          // console.log(data); //댓글배열로나옴
           return data;
         })
         .then((data) => setComment(data.commentResponseDtos));
@@ -216,7 +216,7 @@ const Recruit = () => {
       fetch(`https://api.woodongs.site/study/${id}`, reqOption)
         .then((res) => res.json())
         .then((data) => {
-          console.log(data); //나옴
+          // console.log(data); //나옴
           return data;
         })
         .then((data) => setCard(data));
